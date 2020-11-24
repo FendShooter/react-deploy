@@ -1,0 +1,17 @@
+@mixin breakpoints($breakpoint) {
+  @if $breakpoint == 'mobile' {
+    @media screen and (max-width:25em) {
+      @content
+    }
+  };
+  @if $breakpoint == 'tablette' {
+    @media screen and (min-width:25.62em) and (max-width:54.68em){
+      @content
+    }
+  };
+  @if $breakpoint == 'dark' {
+  @media screen and (prefers-color-scheme: dark){
+@content;
+    }
+  }
+}

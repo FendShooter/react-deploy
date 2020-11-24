@@ -1,0 +1,57 @@
+@import '../../mixins';
+.header {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  background: rgb(80, 29, 175);
+  padding: 3rem;
+   @include breakpoints('tablette') {
+padding: 2rem;
+    }
+}
+
+.navbar {
+  &__list {
+      @include breakpoints('mobile') {
+   display: none;
+    }
+    width: 50rem;
+    list-style: none;
+    display: flex;
+    align-items: center;
+    &--item {
+      flex: 1 1 auto;
+
+      text-align: center;
+      font-size: 1.6rem;
+      color: rgb(255, 255, 255);
+    }
+  }
+}
+.title {
+  font-size: 5rem;
+  margin-left: 2rem;
+  @include breakpoints('mobile') {
+    margin-left: 1rem;
+    font-size: 3rem;
+  }
+}
+.logoContainer {
+  display: flex;
+  align-items: center;
+}
+
+.logo {
+  object-fit: contain;
+  height: 5rem;
+  @include breakpoints('mobile') {
+    height: 3.5rem;
+  }
+}
+
+.request {
+  background: teal;
+  padding: 1rem;
+  color: #fff;
+  border-radius: 3px;
+}

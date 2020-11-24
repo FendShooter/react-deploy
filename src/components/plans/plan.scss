@@ -1,0 +1,90 @@
+@import '../../mixins';
+.single__plan {
+  min-width: 280px;
+  background: #fff;
+  padding: 1rem 0;
+  border-radius: 6px;
+  box-shadow: 0px 0px 7px #ccc;
+  position: relative;
+  @include breakpoints('tablette') {
+    max-width: 260px;
+  }
+  @include breakpoints('mobile') {
+    max-width: 100%;
+  }
+  &:nth-of-type(2){
+    background:rgb(109, 70, 182);
+    color: #fff;
+    & > .most-pop{
+      content: 'Most Popular';
+      position: absolute;
+      top: -20px;
+      left:-10px;
+      box-shadow: 0px 0px 7px rgb(109, 70, 182);
+      display: grid;
+      place-items: center;
+      width: 8rem;
+      height: 8rem;
+      border-radius: 50%;
+      color: teal;
+      font-weight: bolder;
+      background: white;
+      transform: rotate(-45deg);
+    }
+  }
+}
+.most-pop{
+  display: none;
+}
+  
+.user {
+  font-size: 1.4rem;
+  text-transform: none;
+  color: rgb(165, 165, 165);
+}
+.plan {
+  &-title {
+    text-transform: capitalize;
+    font-weight: normal;
+    font-size: 2rem;
+  }
+  &__option {
+    font-size: 1.5rem;
+    color: #bbb;
+  }
+  &-price {
+    text-transform: capitalize;
+    font-weight: bolder;
+    font-size: 4.5rem;
+    margin: 1rem 0;
+  }
+  &__header {
+    border-bottom: 1px solid rgb(223, 223, 223);
+  }
+  &__features {
+    list-style: none;
+    text-align: left;
+    padding: 1rem;
+    &--item {
+      margin: 1rem;
+      font-size: 1.5rem;
+    }
+  }
+}
+
+.btn--getStarted {
+  background: teal;
+  padding: 1rem 2.5rem;
+  text-decoration: none;
+  font-size: 1.5rem;
+  color: white;
+  border-radius: 4px;
+  display: inline-block;
+  margin: 1rem 0;
+  transform: translateY(0);
+  transition: all 0.4s;
+  &:hover {
+    transform: translateY(0.5rem);
+    box-shadow: 0px 0px 7px rgb(10, 90, 90);
+  }
+}

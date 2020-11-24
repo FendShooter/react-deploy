@@ -1,0 +1,31 @@
+*, *::after, *::before{
+margin:0;
+padding:0;
+box-sizing:inherit
+}
+@import './mixins';
+html{
+box-sizing:border-box;
+font-size: 62.5%;
+@include breakpoints('mobile') {
+  font-size: 60.5%;
+
+  }
+}
+body{
+height:100%;
+
+
+}
+img, svg{
+max-width: 100%;
+}
+.container{
+  width: calc(100% - 2rem);
+  max-width: 180rem;
+  margin: 0 auto;
+  display: flex;
+  flex-direction: column;
+height: 100vh;
+}
+

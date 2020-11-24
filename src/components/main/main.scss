@@ -1,0 +1,91 @@
+@import '../../mixins';
+
+.main {
+  flex: 1;
+  background: rgb(236, 255, 255);
+  padding: 1rem;
+  @include breakpoints('dark') {
+    background: #000;
+    color: white;
+  }
+}
+
+.main__header {
+  margin: 5rem auto;
+  text-align: center;
+}
+
+.lead {
+  font-size: 2rem;
+}
+.color-gray {
+  color: gray;
+}
+
+.price--title {
+  margin: 1rem 0;
+  font-size: 4rem;
+}
+.btn {
+  &--plan {
+    display: flex;
+    box-shadow: 0px 0px 7px rgb(155, 155, 155);
+    justify-content: space-evenly;
+    padding: 0.5rem;
+    border-radius: 40px;
+    width: 19rem;
+    margin: 3rem auto;
+    background: rgb(255, 255, 255);
+    position: relative;
+    @include breakpoints('mobile') {
+      width: 14rem;
+      margin: 1.5rem auto;
+      border-radius: 40px;
+    }
+  }
+  &__switcher {
+    background: teal;
+    color: #ccc;
+    transform: translate(-4.5rem, -3px);
+    width: 50%;
+    height: 90%;
+    position: absolute;
+    transition: all 0.5s;
+    border-radius: 40px;
+    transform: translate(-4.5rem, -3px);
+    @include breakpoints('mobile') {
+      transform: translate(-3rem, -17px);
+      width: 45%;
+      margin: 1.5rem auto;
+      border-radius: 15px;
+    }
+  }
+  & > span {
+    cursor: pointer;
+    flex: 1;
+    padding: 1rem 2rem;
+    font-size: 1.6rem;
+  }
+}
+
+.active {
+  transform: translate(4.5rem, -3px);
+  @include breakpoints('mobile') {
+    transform: translate(3.1rem, -17px);
+  width: 45%;
+      margin: 1.5rem auto;
+      border-radius: 15px;
+  }
+}
+.plans--container {
+  display: grid;
+  width: 90%;
+  margin: 0 auto;
+  grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));
+  @include breakpoints('tablette') {
+    grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));
+    gap: 1rem;
+  }
+  grid-template-rows: min-content;
+  gap: 4rem;
+}
